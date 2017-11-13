@@ -1,0 +1,255 @@
+*
+{
+	box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+h1
+{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 50px;
+	text-align: center;
+}
+
+h2
+{
+	text-align: center;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 500px;
+}
+
+p
+{
+	font-family: 'Barlow', sans-serif;
+	font-weight: 300px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#about
+{
+
+}
+
+#bomb_pic
+{
+	width:250px; 
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    filter: grayscale(100%);
+}
+
+#project_text
+{
+	
+}
+
+#projects
+{
+	background-color: #F1F1F1;
+	width: 100%;
+}
+
+#samurai_pic 
+{
+	width: 250px;
+    height: 250px;
+    
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    filter: grayscale(100%);
+}
+
+#wizard_pic 
+{
+	width: 250px;
+    height: 250px;
+
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    filter: grayscale(100%);
+    
+}
+
+#profile
+{
+	width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+#contact_details
+{
+
+	
+}
+
+/* Media Queries */
+
+/* tablet */
+@media (max-width:800px)
+{
+	#profile
+	{
+		width: 200px;
+		height: 200px;
+
+		border-radius: 100%;
+	}
+
+	#bomb_pic
+	{
+		width: 300px;
+		height: 300px;
+
+	}
+
+	#samurai_pic
+	{
+		width: 300px;
+		height: 300px;
+	}
+
+	#wizard_pic
+	{
+		width: 300px;
+		height: 300px;
+	} 
+
+}
+
+/* smartphone */
+@media (max-width:500px)
+{
+	.column {
+        width: 100%;
+    }
+
+	#profile
+	{
+		width: 100px;
+		height: 100px;
+
+		border-radius: 100%;
+	}
+
+	#bomb_pic
+	{
+		width: 200px;
+		height: 200px;
+
+	}
+
+	#samurai_pic
+	{
+		width: 200px;
+		height: 200px;
+	}
+
+	#wizard_pic
+	{
+		width: 200px;
+		height: 200px;
+	}
+
+	#navbar li a:not(:first-child)
+	{
+		display: none;
+	} 
+
+	.topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  	#projects_heading
+  	{
+  		font-size: 40px;
+  	}
+
+
+}
