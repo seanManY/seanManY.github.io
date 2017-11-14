@@ -263,7 +263,7 @@ p
 		padding-left: 20%;
 	}
 
-	#navbar li a:not(:first-child)
+	#navbar li a
 	{
 		display: none;
 	} 
