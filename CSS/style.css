@@ -181,9 +181,10 @@ p
 #about
 {
 	background: url("../pictures/legos.jpg") no-repeat;
-	background-size: 100% 100%; 
 	color: white;
 
+
+	background-size: 100%; 
 	padding-left: 20%;
 	padding-right: 20%;
 	padding-bottom: 10%;
