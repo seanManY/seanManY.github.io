@@ -1,34 +1,25 @@
-//animated scrolling for navbar
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+$(function() {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+    // Call Gridder
+    $('.gridder').gridderExpander({
+        scroll: true,
+        scrollOffset: 30,
+        scrollTo: "panel",                  // panel or listitem
+        animationSpeed: 400,
+        animationEasing: "easeInOutExpo",
+        showNav: true,                      // Show Navigation
+        nextText: "Next",                   // Next button text
+        prevText: "Previous",               // Previous button text
+        closeText: "Close",                 // Close button text
+        onStart: function(){
+            //Gridder Inititialized
+        },
+        onContent: function(){
+            //Gridder Content Loaded
+        },
+        onClosed: function(){
+            //Gridder Closed
+        }
+    });
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
 });
-
-  function responsiveNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
