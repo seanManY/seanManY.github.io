@@ -1,0 +1,397 @@
+*
+{
+	box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+/* Navbar */
+
+.topnav {
+    
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Barlow Condensed', sans-serif;
+    display:inline-block;
+}
+
+.topnav a:hover {
+    color: black;
+}
+
+.active {
+    color: black;
+}
+
+.topnav .icon {
+    display: none;
+}
+#name_heading
+{
+	height: 35%;
+	width: 35%;
+}
+
+#myTopnav
+{
+
+    background-color: #fbdd14;
+}
+
+
+#nav_title
+{
+	color: black;
+	vertical-align: center;
+	font-size: 90px;
+	width: 100%
+}
+
+#break
+{
+	width: 70%;
+	height:2px;
+}
+
+/* font formating */
+h1
+{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 50px;
+	text-align: center;
+}
+
+h2
+{
+	text-align: center;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 500px;
+}
+
+p
+{
+	font-family: 'Barlow', sans-serif;
+	font-weight: 300px;
+}
+
+/* projects */
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#project_text
+{
+	
+}
+
+#projects
+{
+	background-color: #F1F1F1;
+	width: 100%;
+}
+
+#samurai_pic 
+{
+	width: 250px;
+    height: 250px;
+    
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+}
+
+#wizard_pic 
+{
+	width: 250px;
+    height: 250px;
+
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    
+}
+
+#bomb_pic
+{
+	width:250px; 
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+}
+
+#research
+{
+	width: 250px;
+	height: 250px;
+
+	display: block;
+	margin: 0 auto;
+
+	border-radius: 50%;
+}
+
+/* about */
+#about
+{
+	background: url("../pictures/legos.jpg") no-repeat;
+	color: white;
+
+
+	background-size: 100%; 
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 10%;
+
+	font-size: 20px;
+	
+}
+
+#about_heading
+{
+
+	padding-top: 10%;
+}
+#about_body
+{
+
+	vertical-align: text-bottom;
+}
+
+#profile
+{
+	background-color: white;
+	background-size: 100%;
+
+	width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+}
+
+#contact_details
+{
+	text-align: center;
+	vertical-align: middle;
+	line-height: 300px;
+	font-size: 30px;
+	font-family: 'Barlow', sans-serif;	
+}
+
+#Contact
+{
+	background-color: #fbdd14;
+	padding-top: 10px;
+	padding-bottom: 100px;
+
+	text-align: center;
+	font-size: 30px;
+}
+
+a[href^="mailto"] 
+{
+	color: black;
+}
+
+#FeaturePri
+{
+	
+}
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #3B5998;
+  color: white;
+}
+
+#social
+{
+	text-align: center;
+}
+
+
+/* Media Queries */
+
+/* tablet */
+@media (max-width:800px)
+{
+	#profile
+	{
+		width: 200px;
+		height: 200px;
+
+		border-radius: 100%;
+	}
+
+	#bomb_pic
+	{
+		width: 250px;
+		height: 250px;
+
+	}
+
+	#samurai_pic
+	{
+		width: 250px;
+		height: 250px;
+	}
+
+	#wizard_pic
+	{
+		width: 250px;
+		height: 250px;
+	} 
+
+	#contact_details
+	{
+		font-size: 20px;
+		line-height: 180px;
+	}
+
+
+}
+
+/* smartphone */
+@media (max-width:500px)
+{
+	.column {
+        width: 100%;
+    }
+
+	#profile
+	{
+		width: 100px;
+		height: 100px;
+
+		border-radius: 100%;
+	}
+
+	#bomb_pic
+	{
+		width: 200px;
+		height: 200px;
+
+	}
+
+	#samurai_pic
+	{
+		width: 200px;
+		height: 200px;
+	}
+
+	#wizard_pic
+	{
+		width: 200px;
+		height: 200px;
+	}
+
+	#project_text
+	{
+		padding-right: 20%;
+		padding-left: 20%;
+	}
+
+	#navbar li a
+	{
+		display: none;
+	} 
+
+	.topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  	#projects_heading
+  	{
+  		font-size: 40px;
+  	}
+
+
+  	#contact_details
+  	{
+  		font-size: 15px;
+  		line-height: 80px;
+  	}
+
+}
