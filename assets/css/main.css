@@ -2724,6 +2724,7 @@
 					line-height: 1.5;
 					margin-top: 0.35em;
 					opacity: 0;
+					background-color: black;
 				}
 
 					.tiles article > a .content > :last-child {
@@ -3337,6 +3338,16 @@
 						margin-top: 0;
 					}
 
+					#resume
+					{
+						
+					}
+					#resume > .iframe
+					{
+						width:100px; 
+						height:200px
+					}
+
 		}
 
 /* Wrapper */
@@ -3356,3 +3367,8 @@
 
 		}
 
+#resume
+{
+	margin: auto;
+	width: 60%;
+}
