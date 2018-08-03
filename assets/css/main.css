@@ -3338,17 +3338,16 @@
 						margin-top: 0;
 					}
 
-					#resume
-					{
-						
-					}
-					#resume > .iframe
-					{
-						width:100px; 
-						height:200px
-					}
+					
 
 		}
+
+#resume
+{
+	background-color: black;
+	padding: 5px;
+	
+}
 
 /* Wrapper */
 
@@ -3367,8 +3366,3 @@
 
 		}
 
-#resume
-{
-	margin: auto;
-	width: 60%;
-}
