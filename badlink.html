@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Test</title>
+<script type="text/javascript">
+  var imageURLs = [
+    "images/Bad_Beats/deadlink.jpeg",
+    "images/Bad_Beats/hadany.jpg",
+    "images/Bad_Beats/travolta.gif"
+  ];
+  function getImageTag() {
+    var img = '<img src=\"';
+    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+    img += imageURLs[randomIndex];
+    img += '\" alt=\"pic is broke\"/>';
+    return img;
+  }
+</script>
+</head>
+<body>
+<script type="text/javascript">
+  document.write(getImageTag());
+</script>
+</body>
+</html>
