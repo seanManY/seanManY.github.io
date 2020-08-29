@@ -1645,7 +1645,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #0090c5;
+		background: #115EFA;
 		color: #fff;
 		text-decoration: none;
 		border-radius: 6px;
@@ -1655,6 +1655,11 @@ input, select, textarea {
 		cursor: pointer;
 		font-size: 1.35em;
 		padding: 0.6em 1.5em;
+	}
+
+	#itchio
+	{
+		background: #FA5C5B;
 	}
 
 		input[type="button"].icon:before,
