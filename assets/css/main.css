@@ -1631,6 +1631,12 @@ input, select, textarea {
 				width: auto;
 			}
 
+		.image.icon {
+			display: inline-block;
+			width: 15%;
+			margin: 0 0 0 0;
+		}
+
 /* Button */
 
 	input[type="button"],
