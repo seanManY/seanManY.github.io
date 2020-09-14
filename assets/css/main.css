@@ -132,8 +132,8 @@ input, select, textarea {
 			text-decoration: none;
 		}
 
-	h1, h2, h3, h4, h5, h6 {
-		color: #444;
+	h1, h2, h3, h4, h5, h6, p {
+		color: black;
 		font-weight: 800;
 	}
 
@@ -193,6 +193,8 @@ input, select, textarea {
 	p, ul, ol, dl, table {
 		margin-bottom: 2em;
 	}
+
+
 /* Items */
 #item1
 {
@@ -1947,6 +1949,12 @@ input, select, textarea {
 		padding: 5em 0 5em 0;
 	}
 
+	#main-wrapper-alt {
+		background: #E6E6E6;
+		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+		padding: 5em 0 5em 0;
+	}
+
 
 
 	#footer-wrapper {
@@ -2654,7 +2662,7 @@ input, select, textarea {
 				padding: 0 15px 40px 15px;
 			}
 
-			#main-wrapper, #footer-wrapper {
+			#main-wrapper, #main-wrapper-alt, #footer-wrapper {
 				padding: 40px 30px 40px 30px;
 			}
 
