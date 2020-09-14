@@ -1663,8 +1663,9 @@ input, select, textarea {
 		padding: 0.6em 1.5em;
 	}
 
-	#itchio
+	 #itchio
 	{
+
 		background: #FA5C5B;
 	}
 
@@ -1970,7 +1971,7 @@ input, select, textarea {
 			border-radius: 6px;
 			font-family: 'Barlow', serif;
 			font-weight: 400;
-			padding: 0.25em 0.2em 0.25em 0.2em;
+			padding: 0.25em 0.2em 0.25em 0em;
 			font-size: 3.25em;
 			letter-spacing: 0.05em;
 			display: inline-block;
