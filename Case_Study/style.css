@@ -1,0 +1,68 @@
+body
+{
+  background-color: #F7F3ED;
+  margin: 100px;
+}
+
+header
+{
+  padding-bottom: 80px;
+}
+
+
+.intro{
+  background-image: url("butterfly.jpg");
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;;
+  background-size: cover;
+}
+
+.problem{
+  background-image: url("Problem Pic.png");
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;;
+  background-size: cover;
+}
+
+.prototype{
+  background-image: url("Prototype/hifi.png");
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;;
+  background-size: cover;
+}
+
+.jumbotron h1
+{
+  color: white;
+}
+
+.jumbotron p
+{
+  color: white;
+}
+
+.nav-item a
+{
+  color: black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+  background-color: #C54627;
+}
+
+.card-deck
+{
+  padding-top: 40px;
+}
+
+.list-unstyled
+{
+  padding-top: 40px;
+}
