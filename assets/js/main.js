@@ -1,5 +1,5 @@
 /*
-	Verti by Pixelarity
+	Highlights by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
@@ -7,14 +7,15 @@
 (function($) {
 
 	var	$window = $(window),
-		$body = $('body');
+		$body = $('body'),
+		$html = $('html');
 
 	// Breakpoints.
 		breakpoints({
-			xlarge:  [ '1281px',  '1680px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ null,      '736px'  ]
+			large:   [ '981px',  '1680px' ],
+			medium:  [ '737px',  '980px'  ],
+			small:   [ '481px',  '736px'  ],
+			xsmall:  [ null,     '480px'  ]
 		});
 
 	// Play initial animations on page load.
@@ -24,41 +25,150 @@
 			}, 100);
 		});
 
-	// Dropdowns.
-		$('#nav > ul').dropotron({
-			mode: 'fade',
-			noOpenerFade: true,
-			speed: 300
-		});
+	// Touch mode.
+		if (browser.mobile) {
 
-	// Nav.
+			var $wrapper;
 
-		// Toggle.
-			$(
-				'<div id="navToggle">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
+			// Create wrapper.
+				$body.wrapInner('<div id="wrapper" />');
+				$wrapper = $('#wrapper');
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
+				// Hack: iOS vh bug.
+					if (browser.os == 'ios')
+						$wrapper
+							.css('margin-top', -25)
+							.css('padding-bottom', 25);
+
+				// Pass scroll event to window.
+					$wrapper.on('scroll', function() {
+						$window.trigger('scroll');
+					});
+
+			// Scrolly.
+				$window.on('load.hl_scrolly', function() {
+
+					$('.scrolly').scrolly({
+						speed: 1500,
+						parent: $wrapper,
+						pollOnce: true
+					});
+
+					$window.off('load.hl_scrolly');
+
 				});
+
+			// Enable touch mode.
+				$html.addClass('is-touch');
+
+		}
+		else {
+
+			// Scrolly.
+				$('.scrolly').scrolly({
+					speed: 1500
+				});
+
+		}
+
+	// Header.
+		var $header = $('#header'),
+			$headerTitle = $header.find('header'),
+			$headerContainer = $header.find('.container');
+
+		// Make title fixed.
+			if (!browser.mobile) {
+
+				$window.on('load.hl_headerTitle', function() {
+
+					breakpoints.on('>medium', function() {
+
+						$headerTitle
+							.css('position', 'fixed')
+							.css('height', 'auto')
+							.css('top', '50%')
+							.css('left', '0')
+							.css('width', '100%')
+							.css('margin-top', ($headerTitle.outerHeight() / -2));
+
+					});
+
+					breakpoints.on('<=medium', function() {
+
+						$headerTitle
+							.css('position', '')
+							.css('height', '')
+							.css('top', '')
+							.css('left', '')
+							.css('width', '')
+							.css('margin-top', '');
+
+					});
+
+					$window.off('load.hl_headerTitle');
+
+				});
+
+			}
+
+		// Scrollex.
+			breakpoints.on('>small', function() {
+				$header.scrollex({
+					terminate: function() {
+
+						$headerTitle.css('opacity', '');
+
+					},
+					scroll: function(progress) {
+
+						// Fade out title as user scrolls down.
+							if (progress > 0.5)
+								x = 1 - progress;
+							else
+								x = progress;
+
+							$headerTitle.css('opacity', Math.max(0, Math.min(1, x * 2)));
+
+					}
+				});
+			});
+
+			breakpoints.on('<=small', function() {
+
+				$header.unscrollex();
+
+			});
+
+	// Main sections.
+		$('.main').each(function() {
+
+			var $this = $(this),
+				$primaryImg = $this.find('.image.primary > img'),
+				$bg,
+				options;
+
+			// No primary image? Bail.
+				if ($primaryImg.length == 0)
+					return;
+
+			// Create bg and append it to body.
+				$bg = $('<div class="main-bg" id="' + $this.attr('id') + '-bg"></div>')
+					.css('background-image', (
+						'url("assets/css/images/overlay.png"), url("' + $primaryImg.attr('src') + '")'
+					))
+					.appendTo($body);
+
+			// Scrollex.
+				$this.scrollex({
+					mode: 'middle',
+					delay: 200,
+					top: '-10vh',
+					bottom: '-10vh',
+					init: function() { $bg.removeClass('active'); },
+					enter: function() { $bg.addClass('active'); },
+					leave: function() { $bg.removeClass('active'); }
+				});
+
+		});
 
 })(jQuery);
